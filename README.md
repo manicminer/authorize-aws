@@ -6,7 +6,7 @@ By default the script will assume you want to grant yourself SSH access (TCP/22)
 
 ## Requirements
 
-Uses Python 3.6. Run `pip install -r requirements.txt`. A suitable Python version manager is recommend, but you can install as root if you really want to.
+Uses Python 3.6 and Boto 3. Run `pip install -r requirements.txt`. A suitable Python version manager is recommend, but you can install as root if you really want to.
 
 ## Example usage
 
