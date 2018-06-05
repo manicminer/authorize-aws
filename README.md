@@ -20,9 +20,12 @@ authorize-aws -g employees -D
 # As above, but using a different AWS profile than the default one
 authorize-aws -p acme -g employees -D
 
+# Use a different AWS region
+authorize-aws -r us-west-2 -g employees
+
 # For Windows instances
 authorize-aws -g employees -t 3389
 
 # By default, the description contains your local user name, but can be overridden
 authorize-aws -g employees -d 'Carmen mobile'
-```
+``
