@@ -41,7 +41,7 @@ def main():
     print('Found matching group: {}'.format(group['GroupName']))
 
     try:
-        req = urllib.request.Request('https://ifconfig.co/', headers={'Accept': 'text/plain', 'User-Agent': 'curl/7.54.0'})
+        req = urllib.request.Request('https://ifconfig.co/ip', headers={'Accept': 'text/plain', 'User-Agent': 'curl/7.54.0'})
         res = urllib.request.urlopen(req)
         ip = res.read().decode('utf-8').strip()
     except urllib.error.HTTPError as e:
