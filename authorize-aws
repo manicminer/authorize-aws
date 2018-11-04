@@ -26,7 +26,11 @@ def main():
 
     description = args.description
 
-    session = boto3.session.Session(profile_name=args.profile)
+    try:
+        session = boto3.session.Session(profile_name=args.profile)
+    except botocore.exceptions.ProfileNotFound as e:
+        raise AuthError(e)
+
     client_args = {}
     if args.region:
         client_args['region_name'] = args.region
